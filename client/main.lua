@@ -1,6 +1,7 @@
 -- Initalize table to store points & peds
 local points, peds = {}, {}
 
+<<<<<<< HEAD
 -- Police Call
 local ammtToAlert = 50000
 local ammtToAlertQ = 10
@@ -30,6 +31,8 @@ local function PoliceCall()
     end
 end
 
+=======
+>>>>>>> parent of c09d4ea (Sus Person alert Pawn Shop)
 -- Initalize variables to manage TextUI if applicable
 local inRange, showingUI, keyListener = {}, false, false
 
@@ -160,9 +163,6 @@ lib.callback.register('lation_pawnshop:ConfirmSale', function(_, shopId, item, p
         centered = true,
         cancel = true
     })
-    if confirmation and price >= ammtToAlert or quantity >= ammtToAlertQ then
-        PoliceCall()
-    end
     if not confirmation or confirmation == 'cancel' then return false end
     return true
 end)
