@@ -1,38 +1,6 @@
 -- Initalize table to store points & peds
 local points, peds = {}, {}
 
-<<<<<<< HEAD
--- Police Call
-local ammtToAlert = 50000
-local ammtToAlertQ = 10
-local chance = math.random(0, 4)
-
-local function PoliceCall()
-    if chance == 2 then
-        local data = exports['cd_dispatch']:GetPlayerInfo()
-        TriggerServerEvent('cd_dispatch:AddNotification', {
-            job_table = {'police', }, 
-            coords = data.coords,
-            title = 'Suspicious Person',
-            message = 'A '..data.sex..' was just in my pawn shop and seems to be selling illegal items, im at  '..data.street.. ' please hurry',
-            flash = 0,
-            unique_id = data.unique_id,
-            sound = 1,
-            blip = {
-                sprite = 431, 
-                scale = 1.2, 
-                colour = 3,
-                flashes = false, 
-                text = '911 - Suspicious Person',
-                time = 5,
-                radius = 0,
-            }
-        })
-    end
-end
-
-=======
->>>>>>> parent of c09d4ea (Sus Person alert Pawn Shop)
 -- Initalize variables to manage TextUI if applicable
 local inRange, showingUI, keyListener = {}, false, false
 
