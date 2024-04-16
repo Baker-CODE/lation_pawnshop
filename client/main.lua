@@ -12,7 +12,7 @@ local function PoliceCall()
         TriggerServerEvent('cd_dispatch:AddNotification', {
             job_table = {'police', }, 
             coords = data.coords,
-            title = '10-15 - Suspicious Person',
+            title = 'Suspicious Person',
             message = 'A '..data.sex..' was just in my pawn shop and seems to be selling illegal items, im at  '..data.street.. ' please hurry',
             flash = 0,
             unique_id = data.unique_id,
